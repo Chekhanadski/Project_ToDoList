@@ -18,21 +18,36 @@ function AppToDo() {
     }
   };
 
-  const removeTask = () => {
-
+  const removeTask = (id) => {
+    setTodos([...todos.filter((todo) => todo.id !== id)])
   }
 
-  const handleToggle = () => {
+  const handleToggle = (id) => {
+    setTodos([
+      ...todos.map((todo) =>
+        todo.id === id ? { ...todo, isComplete: !todo.isComplete } : { ...todo }
+      ),
+    ]);
+  };
 
+  const countCompleteTasks = () => {
+    return todos.filter((todo) => todo.isComplete).length
   }
 
   return (
     <div className="App">
       <header>
-        <h1>ToDoList</h1>
-        <h1>{todos.length}</h1>
+        <h1>ToDoList</h1>        
       </header>
       <ToDoForm addTask={addTask}/>
+        <div className='counters'>
+          <div className='tasks-counter'>
+            <h6>Tasks: {todos.length}</h6>
+          </div>
+          <div className='complete-tasks-counter'>
+            <h6>Complete tasks: {countCompleteTasks()}</h6>
+          </div>
+        </div>
       {todos.map((todo) => {
         return (
           <ToDo
