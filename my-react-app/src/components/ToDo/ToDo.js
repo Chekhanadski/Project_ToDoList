@@ -1,10 +1,10 @@
-function ToDo({ todo, toggleTask, removeTask }) {
+function ToDo({ todo, handleToggle, removeTask }) {
   
   return (
     <div key={todo.id} className="item-todo">
       <div
         className={todo.isComplete ? "item-text strike" : "item-text"}
-        onClick={() => toggleTask(todo.id)}
+        onClick={() => handleToggle(todo.id)}
       >
         {todo.task}
       </div>

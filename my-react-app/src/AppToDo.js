@@ -6,28 +6,26 @@ function AppToDo() {
   const [todos, setTodos] = useState([])
 
   const addTask = (userInput) => {
-    if (userInput) {
-      // Создаем новую задачу с уникальным идентификатором
+    if (userInput) {     
       const newItem = {
         id: Math.random().toString(36).substr(2, 9),
-        task: userInput, // Текст задачи
-        isComplete: false, // По умолчанию задача не завершена
-      };
-      // Обновляем состояние "todos", добавляя новую задачу в список
+        task: userInput, 
+        isComplete: false, 
+      };      
       setTodos([...todos, newItem]);
     }
   };
 
   const removeTask = (id) => {
-    setTodos([...todos.filter((todo) => todo.id !== id)])
+    setTodos(todos.filter((todo) => todo.id !== id))
   }
 
   const handleToggle = (id) => {
-    setTodos([
-      ...todos.map((todo) =>
-        todo.id === id ? { ...todo, isComplete: !todo.isComplete } : { ...todo }
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, isComplete: !todo.isComplete } : todo
       ),
-    ]);
+    );
   };
 
   const countCompleteTasks = () => {
@@ -51,9 +49,8 @@ function AppToDo() {
       {todos.map((todo) => {
         return (
           <ToDo
-            todo={todo}
-            key={todo.id}
-            toggleTask={handleToggle}
+            todo={todo}            
+            handleToggle={handleToggle}
             removeTask={removeTask}
           />
         )        
