@@ -1,5 +1,4 @@
 function ToDo({ todo, handleToggle, removeTask }) {
-  
   return (
     <div key={todo.id} className="item-todo">
       <div

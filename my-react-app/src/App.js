@@ -1,7 +1,8 @@
 import AppToDo from "./AppToDo";
+import AppToDoWithLocalStorage from "./AppToDoWithLocalStorage";
 
 function App() {
-  return <AppToDo />;
+  return <AppToDoWithLocalStorage />;
 }
 
 export default App;
