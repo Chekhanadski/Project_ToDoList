@@ -49,7 +49,7 @@ function AppToDoWithLocalStorage() {
   return (
     <div className="App">
       <header>
-        <h3>ToDoList</h3>
+        <h2>ToDoList</h2>
       </header>
       <ToDoForm addTask={addTask} />
       <div className="counters">
