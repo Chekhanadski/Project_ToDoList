@@ -9,10 +9,9 @@ export const fetchTodos = async () => {
         },
       }
     );
-
     const data = await response.json();
     const todos =
-      data & Object.keys(data).map((key) => ({ ...data[key], id: key }));
+      data && Object.keys(data).map((key) => ({ ...data[key], id: key }));
     return todos;
   } catch (error) {
     console.error("Error: ", error);
@@ -46,15 +45,15 @@ export const removeTodo = async (id) => {
       {
         method: "DELETE",
         headers: {
-          "Content-Type": "aplication/json",
+          "Content-Type": "application/json",
         },
       }
-    )
-    return id;  
+    );
+    return id;
   } catch (error) {
-    console.error("Error: ", error)
+    console.error("Error: ", error);
   }
-}
+};
 
 export const toggleTodo = async (todo) => {
   try {
@@ -65,7 +64,7 @@ export const toggleTodo = async (todo) => {
         headers: {
           "Content-Type": "aplication/json",
         },
-        body: JSON.stringify({ ...todo, isComplete: !isComplete }),
+        body: JSON.stringify({ ...todo, isComplete: !todo.isComplete }),
       }
     );
     return todo.id;

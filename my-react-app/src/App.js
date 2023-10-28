@@ -1,8 +1,7 @@
-import AppToDo from "./AppToDo";
-import AppToDoWithLocalStorage from "./AppToDoWithLocalStorage";
+import AppToDoUseFirebase from "./AppToDoUseFirebase";
 
 function App() {
-  return <AppToDoWithLocalStorage />;
+  return <AppToDoUseFirebase />;
 }
 
 export default App;

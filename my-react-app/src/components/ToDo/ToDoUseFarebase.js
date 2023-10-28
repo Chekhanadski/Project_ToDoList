@@ -1,15 +1,17 @@
-function ToDo({ todo, removeTask, handleToggle }) {
+function ToDo({ todo, handleToggle, removeTask }) {
   return (
     <div key={todo.id} className="item-todo">
       <div
         className={todo.isComplete ? "item-text strike" : "item-text"}
         onClick={() => handleToggle(todo)}
       >
-        <todo.task />
+        {todo.task}
       </div>
       <div className="item-delete" onClick={() => removeTask(todo.id)}>
-        x
+        X
       </div>
     </div>
-  )
+  );
 }
+
+export default ToDo;
