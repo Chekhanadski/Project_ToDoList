@@ -1,5 +1,5 @@
-#REACT PROJECT
-##About Project:
+# REACT PROJECT
+## About Project:
 The "TodoList" project was made on react. It is made in three versions:
 
 1. ToDo List without saving data (AppToDo.js);
