@@ -13,18 +13,12 @@ function ToDoForm({ addTask }) {
     setUserInput("");
   };
 
-  const handleKeyPress = (event) => {
-    if (event.key === "Enter") {
-      handleSubmit(event);
-    }
-  };
-
   return (
     <form className="input-form" onSubmit={handleSubmit}>
       <input
         value={userInput}
         type="text"
-        onChange={handleChange}        
+        onChange={handleChange}
         placeholder="Enter Task..."
       />
       <button>SAVE</button>
