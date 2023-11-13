@@ -14,6 +14,9 @@ The "TodoList" project was made on react. It is made in three versions:
 
 Counters for the number of tasks and the number of completed tasks are also implemented.
 
+## Print Screen app
+![image](https://github.com/Chekhanadski/Project_ToDoList/assets/115250960/1ce8565a-dd88-46fa-a2f9-a896df6f2389)
+
 ## Applied technologies in the project:
 
 - React
