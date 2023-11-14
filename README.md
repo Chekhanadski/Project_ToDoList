@@ -27,6 +27,12 @@ Counters for the number of tasks and the number of completed tasks are also impl
 
 ## Actions to view the project:
 
+You can view this project: [here](https://chekhanadski.github.io/Project_ToDoList/)
+
+or 
+
+You can view it locally:
+
 - clone this repo
 - run `npm instal` to install dependencies;
 - run `npm start` to start the local server;
