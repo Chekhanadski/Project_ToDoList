@@ -4,8 +4,8 @@ export const fetchTodos = async () => {
       "https://todolist-a0031-default-rtdb.europe-west1.firebasedatabase.app/todos.json",
       {
         method: "GET",
-        header: {
-          "Content-Type": "aplication/json",
+        headers: {
+          "Content-Type": "application/json",
         },
       }
     );
@@ -25,7 +25,7 @@ export const addTodo = async (newItem) => {
       {
         method: "POST",
         headers: {
-          "Content-Type": "aplication/json",
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(newItem),
       }
@@ -62,7 +62,7 @@ export const toggleTodo = async (todo) => {
       {
         method: "PATCH",
         headers: {
-          "Content-Type": "aplication/json",
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ ...todo, isComplete: !todo.isComplete }),
       }
