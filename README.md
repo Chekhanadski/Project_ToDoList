@@ -1,10 +1,10 @@
 # Welcome to the ToDoList Application
 
-## Description
-The ToDoList Application is a simple and intuitive task management tool that helps you keep track of your daily tasks. With this application, you can add new tasks, mark them as complete, and remove tasks when they're done. The application supports local storage, Firebase for backend storage, and provides real-time updates.
-
 ## View the Project
 You can view the deployment of the ToDoList application here: [ToDoList](https://chekhanadski.github.io/Project_ToDoList).
+
+## Description
+The ToDoList Application is a simple and intuitive task management tool that helps you keep track of your daily tasks. With this application, you can add new tasks, mark them as complete, and remove tasks when they're done. The application supports local storage, Firebase for backend storage, and provides real-time updates.
 
 ## Features
 Add Tasks: Enter a task in the input field and save it to the list.
